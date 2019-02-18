@@ -10,9 +10,41 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
+        <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
+    <!--hessian servlet配置-->
+    <servlet>
+        <servlet-name>hessian-service</servlet-name>
+
+        <servlet-class>
+            com.caucho.hessian.server.HessianServlet
+        </servlet-class>
+
+        <init-param>
+            <param-name>home-class</param-name>
+            <param-value>
+                <!-- 服务实现类 -->
+                org.byron4j.hessian.service.impl.HelloServiceImpl
+            </param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>home-api</param-name>
+            <!-- 服务接口 -->
+            <param-value>
+                org.byron4j.hessian.service.HelloService
+            </param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>hessian-service</servlet-name>
+        <url-pattern>/hessian</url-pattern>
+    </servlet-mapping>
+
+    <!--springmvc servlet配置-->
     <servlet>
         <servlet-name>dispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -25,7 +57,7 @@
 
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/app</url-pattern>
     </servlet-mapping>
 </web-app>
         

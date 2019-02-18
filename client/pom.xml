@@ -44,6 +44,11 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${springmvc.version}</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

@@ -22,7 +22,7 @@ public class HessianClient {
     @Test//(timeout = 2000)
     public void testService4Success() throws MalformedURLException {
 
-        String url = "http://localhost:8080/hessian-server/hessian";
+        String url = "http://localhost:8080/platform/hessian";
         System.out.println("请求的服务端地址：" + url);
 
         HessianProxyFactory factory = new HessianProxyFactory();
