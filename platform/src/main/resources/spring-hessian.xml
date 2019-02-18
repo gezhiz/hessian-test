@@ -12,8 +12,12 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan use-default-filters="false"
-                            base-package="com.worthto">
-    </context:component-scan>
+    <bean id="helloService" class="com.worthto.platform.service.HelloServiceImpl"></bean>
+
+    <bean name="/helloService"
+          class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <property name="service" ref="helloService" />
+        <property name="serviceInterface" value="com.worthto.common.service.HelloService" />
+    </bean>
 
 </beans>

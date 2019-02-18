@@ -21,7 +21,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <springmvc.version>4.3.6.RELEASE</springmvc.version>
+    <javax.servlet.version>3.1.0</javax.servlet.version>
+    <javax.servlet.jsp.version>2.2</javax.servlet.jsp.version>
+    <springmvc.version>5.0.4.RELEASE</springmvc.version>
   </properties>
 
   <dependencyManagement>
@@ -32,6 +34,12 @@
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>${springmvc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>5.0.4.RELEASE</version>
+        <scope>test</scope>
       </dependency>
 
       <!-- 引入hessian依赖 -->
@@ -58,8 +66,13 @@
       <!-- 引入servlet -->
       <dependency>
         <groupId>javax.servlet</groupId>
-        <artifactId>servlet-api</artifactId>
-        <version>3.0-alpha-1</version>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>${javax.servlet.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>${javax.servlet.jsp.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>

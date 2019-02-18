@@ -1,4 +1,4 @@
-package com.worthto.domain;
+package com.worthto.common.domain;
 
 import java.io.Serializable;
 import java.util.Map;

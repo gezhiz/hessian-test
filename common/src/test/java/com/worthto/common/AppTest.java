@@ -1,4 +1,4 @@
-package com.worthto;
+package com.worthto.common;
 
 import static org.junit.Assert.assertTrue;
 

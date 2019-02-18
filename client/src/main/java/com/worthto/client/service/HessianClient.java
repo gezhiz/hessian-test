@@ -1,8 +1,8 @@
 package com.worthto.client.service;
 
 import com.caucho.hessian.client.HessianProxyFactory;
-import com.worthto.domain.User;
-import com.worthto.service.HelloService;
+import com.worthto.common.domain.User;
+import com.worthto.common.service.HelloService;
 import org.junit.Test;
 
 import java.net.MalformedURLException;
@@ -22,7 +22,7 @@ public class HessianClient {
     @Test//(timeout = 2000)
     public void testService4Success() throws MalformedURLException {
 
-        String url = "http://localhost:8080/platform/hessian";
+        String url = "http://localhost:8080/platform/app/helloService";
         System.out.println("请求的服务端地址：" + url);
 
         HessianProxyFactory factory = new HessianProxyFactory();

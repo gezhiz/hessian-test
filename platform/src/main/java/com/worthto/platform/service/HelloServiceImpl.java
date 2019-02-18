@@ -1,8 +1,8 @@
 package com.worthto.platform.service;
 
 import com.caucho.hessian.server.HessianServlet;
-import com.worthto.domain.User;
-import com.worthto.service.HelloService;
+import com.worthto.common.domain.User;
+import com.worthto.common.service.HelloService;
 
 /**
  * Created by gezz on 2019/2/18.

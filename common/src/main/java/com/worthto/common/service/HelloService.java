@@ -1,6 +1,6 @@
-package com.worthto.service;
+package com.worthto.common.service;
 
-import com.worthto.domain.User;
+import com.worthto.common.domain.User;
 
 /**
  * Created by gezz on 2019/2/18.

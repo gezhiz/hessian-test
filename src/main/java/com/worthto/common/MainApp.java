@@ -1,4 +1,4 @@
-package com.worthto;
+package com.worthto.common;
 
 import org.apache.camel.main.Main;
 
