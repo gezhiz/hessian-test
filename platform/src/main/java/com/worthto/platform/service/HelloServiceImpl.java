@@ -16,11 +16,13 @@ public class HelloServiceImpl extends HessianServlet implements HelloService {
 
     @Override
     public String helloWorld(String message) {
+        System.out.println("client：invoke helloworld");
         return "Hello, " + message;
     }
 
     @Override
     public User getMyInfo(User user) {
+        System.out.println("client：invoke getMyInfo");
         if (null == user) {
             return new User();
         }

@@ -43,4 +43,13 @@ public class User implements Serializable {
     public void setDetailData(Map<String, Object> detailData) {
         this.detailData = detailData;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", age=" + age +
+                ", detailData=" + detailData +
+                '}';
+    }
 }

@@ -12,8 +12,6 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan use-default-filters="false"
-                            base-package="com.worthto">
-    </context:component-scan>
+    <import resource="classpath:spring-hessian.xml"/>
 
 </beans>

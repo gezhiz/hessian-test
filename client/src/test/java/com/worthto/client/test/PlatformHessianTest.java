@@ -29,6 +29,9 @@ public class PlatformHessianTest {
         user.setAge(18);
         user.setUserName("OYY");
         user.setDetailData(detailData);
-        helloService.getMyInfo(user);
+
+        User user1 = helloService.getMyInfo(user);
+        helloService.helloWorld("hello world message");
+        System.out.println(user1);
     }
 }
