@@ -14,7 +14,7 @@ import java.util.HashMap;
  * Created by gezz on 2019/2/18.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/applicationContext.xml")
+@ContextConfiguration("/applicationContext-client.xml")
 public class PlatformHessianTest {
     @Autowired
     private HelloService helloService;
